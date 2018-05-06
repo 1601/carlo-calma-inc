@@ -1,3 +1,51 @@
+@font-face {
+	font-family: AauxProBlack;
+	src: url(/fonts/AauxProBlack.ttf);
+}
+
+@font-face {
+	font-family: AauxProLight;
+	src: url(/fonts/AauxProLight.ttf);
+}
+
+@font-face {
+	font-family: AdobeFnt19;
+	src: url(/fonts/AdobeFnt19.lst);
+}
+
+@font-face {
+	font-family: BebasNeue;
+	src: url(/fonts/BebasNeue.otf);
+}
+
+@font-face {
+	font-family: InfiniRegular;
+	src: url(/fonts/infini-regular.otf);
+}
+
+@font-face {
+	font-family: MinionPro-Regular;
+	src: url(/fonts/MinionPro-Regular.otf);
+}
+
+
+.logo-font {
+	font-family: BebasNeue;
+}
+
+html {
+	width: 100%;
+}
+
+.logotext-nav {
+	width: max-content;
+}
+
+/* 
+Colors:
+	Logo text:  white 
+	Navigation: grey-2*/
+
 :root {
 	/* Colors */
 	--primary: rgba(255, 68, 0, 1);
@@ -5,13 +53,13 @@
 	--white: rgba(255, 255, 255, 1);
 	--off-white: rgba(255, 253, 252, 1);
 	--grey-1: rgba(245, 243, 242, 1);
-	--grey-2: rgba(235, 231, 230, 1);
+	--grey-2: rgb(128, 128, 128);
 	--grey-3: rgba(89, 87, 86, 1);
 	--grey-4: rgba(66, 64, 64, 1);
-	--black: rgba(43, 37, 35, 1);
+	--black: rgb(0, 0, 0);
 
 	/* Typography */
-	--font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+	--font-family: InfiniRegular, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 	--line-height: 1.5;
 
 	--font-size: 18px;

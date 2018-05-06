@@ -108,6 +108,7 @@ html.Home {
 	background-color: black;
 }
 
+/* remove from page */
 .not-in-Home {
 	display:none;
 }
@@ -147,6 +148,11 @@ input::-webkit-input-placeholder {
 	margin-left: 50%;
 	transform: translateX(-50%);
 	max-width: none;
+}
+
+/* remove logo when In about page */
+.not-in-About.logo-calma {
+	display:none;
 }
 
 @media (--breakpoint-not-small) {

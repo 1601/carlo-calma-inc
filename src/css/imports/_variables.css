@@ -33,10 +33,11 @@
 	font-family: BebasNeue;
 }
 
-html {
+html, body {
 	width: 100%;
 	background-color: rgba(188, 190, 192, 1);
 }
+
 
 .logotext-nav {
 	width: max-content;
@@ -73,6 +74,10 @@ html.Home {
     height: .9rem;
     border-radius: 0;
 	line-height: 0;
+}
+
+.link:hover {
+	text-decoration: none;
 }
 
 .search::focus {

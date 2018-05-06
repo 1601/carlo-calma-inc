@@ -4,16 +4,16 @@
 	<div class="left-nav">
 		<div class="logotext-nav dib">
 			<!-- Logo Text TODO: EDITABLE -->
-			<a href="/" class="white link f3 f2-ns lh-title ml1 ttu"><span class="logo-font">Carlo Calma Consultancy Inc.</span></a>
+			<a href="/" class="white link f3 f2-ns lh-title ml1 ttu pointer"><span class="logo-font">Carlo Calma Consultancy Inc.</span></a>
 			
 			<!-- Primary Nav -->
 			<ul class="tr lh-0">
 				<!-- TODO: EDITABLE -->
-				<li class="dib"><a href="/works" class="link dim grey-2 f6 f5-ns mr1 ttu works-{{.Title}}">Works</a></li>
+				<li class="dib"><a href="/works" class="link dim grey-2 f6 f5-ns mr1 pointer ttu works-{{.Title}}">Works</a></li>
 
-				<li class="dib"><a href="/journal" class="link dim grey-2 f6 f5-ns mr1 ttu journal-{{.Title}}">Journal</a></li>
+				<li class="dib"><a href="/journal" class="link dim grey-2 f6 f5-ns mr1 pointer ttu journal-{{.Title}}">Journal</a></li>
 
-				<li class="dib"><a href="/about" class="link dim grey-2 f6 f5-ns mr1 ttu about-{{.Title}}">About</a></li>
+				<li class="dib"><a href="/about" class="link dim grey-2 f6 f5-ns mr1 pointer ttu about-{{.Title}}">About</a></li>
 
 				<li class="dib not-in-{{ .Title }} dn-l">
 					<input type="text" placeholder="Search" class="search"/>
@@ -26,5 +26,5 @@
 		<img src="/img/carlo-logo.png" alt="Carlo Calma Consultancy Inc. Logo" class="dib not-in-{{ .Title }} logo-calma"/>
 	</div>
 
-	<input type="text" placeholder="Search" class="search ma2 dn dib-ns"/>
+	<input type="text" placeholder="Search" class="search ma2 dn dib-ns not-in-{{ .Title }}"/>
 </nav>

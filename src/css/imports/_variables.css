@@ -41,6 +41,15 @@ html {
 	width: max-content;
 }
 
+footer.Home {
+	position: absolute;
+	bottom:0;
+	padding-bottom: 1rem;
+}
+
+.lh-0 {
+	line-height: 0;
+}
 /* 
 Colors:
 	Logo text:  white 

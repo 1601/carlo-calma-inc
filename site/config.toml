@@ -1,7 +1,3 @@
-baseURL = "https://yoursite.example.com/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Carlo Calma Consultancy Inc."
-
-[params]
-  author = "Nikola Tesla"
-  description = "Tesla's Awesome Hugo Site"

@@ -1,11 +1,3 @@
-baseURL: https://yoursite.example.com/
-footnoteReturnLinkContents: ↩
-params:
-  AuthorName: Jon Doe
-  GitHubUser: spf13
-  ListOfFoo:
-  - foo1
-  - foo2
 backend:
   name: git-gateway
 

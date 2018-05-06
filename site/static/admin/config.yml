@@ -56,11 +56,25 @@ collections: # A list of collections the CMS should be able to edit
   - name: "component"
     label: "Components"
     files:
-      - file: "site/data/_index.md"
-        label: "Etc."
-        name: "etc"
+      - file: "site/data/footer.toml"
+        label: "Footer"
+        name: "footer"
         fields:
-          - {label: Address 1, name: address1, widget: string}
-          - {label: Address 2, name: address2, widget: string}
-          - {label: Phone Number, name: phonenumber, widget: string}
-          - {label: Email Address, name: emailaddress, widget: string}
+         - name: "params"
+           label: "Params"
+           widget: "object"
+           fields:
+              - name: "tiles"
+                label: "Tiles"
+                widget: "object"
+                fields:
+                  - {label: "Enable", name: "enable", widget: "boolean"}
+                  - name: "showcase"
+                    label: "Showcase Items"
+                    widget: "list"
+                    create: true # Allow users to create new documents in this collection
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Sub Title", name: "subtitle", widget: "string" }
+                      - { label: "Image", name: "image", widget: "image", required: false }
+                      - { label: "URL", name: "url", widget: "string" }

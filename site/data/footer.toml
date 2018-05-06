@@ -1,0 +1,16 @@
+[params]
+
+[params.tiles]
+enable = true
+
+[[params.tiles.showcase]]
+image = "/images/some-image.jpg"
+subtitle = "SubTitle 1"
+title = "Title 1"
+url = "/path1/"
+
+[[params.tiles.showcase]]
+image = "/images/some-other-image.jpg"
+subtitle = "SubTitle 2"
+title = "Title 2"
+url = "/path2/"

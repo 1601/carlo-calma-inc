@@ -1,15 +1,10 @@
 {{ define "main" }}
-
-  <div class="mw6 center ph3 pv4">
-    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
-    <div class="flex justify-between grey-3">
-      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p>Read in {{ .ReadingTime }} minutes</p>
-    </div>
-    <div class="cms mw6">
-      <p>{{ .Description }}</p>
-      {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
-      {{ .Content }}
+  <div class="mw-100 mw6-ns center bg-grey-4 mt2 mb-3 black">
+    {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
+    <h2 class="f4 f4-ns tc">{{ .Params.headline }}</h2>
+    <h2 class="f5 f5-ns tc mb-1">{{ .Params.subheadline }}</h2>
+    <div class="single-work">
+        {{ .Content }}
     </div>
   </div>
 {{ end }}

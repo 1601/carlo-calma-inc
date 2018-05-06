@@ -1,7 +1,20 @@
-<li class="dib ph2 raise">
-  <a href="{{.link}}" class="link bg-white black db relative br-100 pa2">
-    <svg width="16px" height="16px" class="db">
-      <use xlink:href="#{{.svg}}"></use>
-    </svg>
-  </a>
-</li>
+<ul class="socialicons-list">
+  <li class="dib">
+    <a href="{{ .Site.Data.socialmedia.params.facebook }}" class="link pointer dib facebook"></a>
+  </li>
+  <li class="dib">
+    <a href="{{ .Site.Data.socialmedia.params.twitter }}" class="link pointer dib twitter"></a>
+  </li>
+  <li class="dib">
+    <a href="{{ .Site.Data.socialmedia.params.pinterest }}" class="link pointer dib pinterest"></a>
+  </li>
+  <li class="dib">
+    <a href="{{ .Site.Data.socialmedia.params.reddit }}" class="link pointer dib reddit"></a>
+  </li>
+  <li class="dib">
+    <a href="{{ .Site.Data.socialmedia.params.linkedin }}" class="link pointer dib linkedin"></a>
+  </li>
+  <li class="dib">
+    <a href="{{ .Site.Data.socialmedia.params.tumblr }}" class="link pointer dib tumblr"></a>
+  </li>
+</ul>

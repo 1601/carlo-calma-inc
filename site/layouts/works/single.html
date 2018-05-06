@@ -1,13 +1,18 @@
 {{ define "main" }}
-  <div class="mw-100 mw6-ns center bg-grey-4 mt2 mb-3 black">
+  <div class="mw-100 mw6-ns center bg-grey-4 mt2 black">
     {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
     <h2 class="f4 f4-ns tc">{{ .Params.headline }}</h2>
     <h2 class="f5 f5-ns tc mb-1">{{ .Params.subheadline }}</h2>
-    <div class="single-work">
+    <div class="single-work mb4">
         {{ .Content }}
     </div>
     <div class="center w-100 tc">
-        <a href="/works" class="link pointer ttu">back to works</a>
+      <div class="mb4">
+          {{ partial "social-icon" .}}
+      </div>
+      <div class="mb5">
+          <a href="/works" class="link pointer ttu mt5">back to works</a>
+      </div>
     </div>
   </div>
 {{ end }}

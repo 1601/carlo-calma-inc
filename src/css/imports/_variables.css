@@ -148,8 +148,53 @@ input::-webkit-input-placeholder {
 		display:inline-block;
 		padding-bottom: .5rem;
 	}
+
+	ul.socialicons-list li a {
+		zoom: .6 !important;
+	}
 }
 
+ul.socialicons-list li a {
+	zoom: 0.4;
+}
+
+/* Social Media Sprite */
+
+.facebook {
+	background: url('/img/social-media-icons.gif') no-repeat -17px -13px;
+	width: 42px;
+	height: 42px;
+}
+
+.twitter {
+	background: url('/img/social-media-icons.gif') no-repeat -65px -13px;
+	width: 42px;
+	height: 42px;
+}
+
+.pinterest {
+	background: url('/img/social-media-icons.gif') no-repeat -113px -13px;
+	width: 42px;
+	height: 42px;
+}
+
+.reddit {
+	background: url('/img/social-media-icons.gif') no-repeat -160px -12px;
+	width: 44px;
+	height: 44px;
+}
+
+.linkedin {
+	background: url('/img/social-media-icons.gif') no-repeat -209px -13px;
+	width: 42px;
+	height: 42px;
+}
+
+.tumblr {
+	background: url('/img/social-media-icons.gif') no-repeat -257px -13px;
+	width: 42px;
+	height: 42px;
+}
 
 
 /* 

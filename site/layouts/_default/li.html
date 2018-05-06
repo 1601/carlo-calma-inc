@@ -1,7 +1,10 @@
-<a href="{{ .Permalink }}" class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
+<a href="{{ .Permalink }}" class="no-underline raise w-100 relative">
 	{{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
-	<h2 class="f3 b lh-title mb1 primary">{{ .Params.headline }}</h2>
-	<h2 class="f3 b lh-title mb1 primary">{{ .Params.subheadline }}</h2>
+	<div class="absolute bottom-0 w-100 bottom-1">
+		<h2 class="f5 f4-ns white tc">{{ .Params.headline }}</h2>
+		<h2 class="f6 f5-ns white tc">{{ .Params.subheadline }}</h2>
+	</div>
+	
 	<!-- <p class="mid-gray lh-title mb2">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
 	<p class="mb0">{{ .Description }}</p>
 	<p class="link b dib black mb0">Read more →</p> -->

@@ -1,16 +1,12 @@
 {{ define "main" }}
+<div class="mw-100 mw6-ns center bg-grey-4 mt2 mb-3">
 
-<!-- {{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" .Title) }} -->
-<div class="mw7 center bg-grey-4">
-    
-  <ul class="flex-ns flex-wrap mhn1-ns pa3">
-      <!-- List for Works Collection - Paginated with 5 -->
-      {{ range $index, $element := (.Paginator 2).Pages.ByPublishDate }} 
-            <div class="w-100-ns ph1-ns flex">
-              {{ .Render "li"}}
-            </div>
-      {{ end }}
-  </ul>
+  <!-- List for Works Collection - Paginated with 5 -->
+  {{ range $index, $element := (.Paginator 3).Pages.ByPublishDate }} 
+        <div class="w-100 mb-3">
+          {{ .Render "li"}}
+        </div>
+  {{ end }}
   <!-- TODO: Pagination with numbers -->
   {{ partial "pagination" . }}
 </div>

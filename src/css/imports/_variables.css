@@ -66,6 +66,10 @@ img {
 	margin: 1rem 0;
 }
 
+.about-page p {
+	margin: 1rem 0.5rem;
+}
+
 .logotext-nav {
 	width: max-content;
 }

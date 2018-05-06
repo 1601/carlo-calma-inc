@@ -1,25 +1,10 @@
 {{ define "main" }}
-
-<div class="ph3 bg-grey-4">
-	<div class="center mw6 pv3">
-
-		<img src="{{ .Params.image }}" alt="" class="db w4 center pv4">
-		<h1>{{ .Params.headline }}</h1>
-		<h2>{{ .Params.subheadline }}</h2>
-		{{ .Content }}
-
-		<!-- <div class="flex-ns mb3">
-	        	{{ range .Params.contact_entries }}
-				<div>
-					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
-					<p>{{ .text }}</p>
-				</div>
-			{{ end }}
-		</div>
-
-		{{ partial "contact-form" . }} -->
-
-	</div>
-</div>
-
+  <div class="mw-100 mw6-ns center bg-grey-4 mt2 black">
+    {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
+    <h2 class="f4 f4-ns tc">{{ .Params.headline }}</h2>
+    <h2 class="f5 f5-ns tc mb-1">{{ .Params.subheadline }}</h2>
+    <div class="single-work mb4">
+        {{ .Content }}
+    </div>
+  </div>
 {{ end }}

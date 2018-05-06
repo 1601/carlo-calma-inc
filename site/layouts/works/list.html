@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<!-- {{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" .Title) }} -->
+<div class="mw7 center">
+    
+  <ul class="flex-ns flex-wrap mhn1-ns pa3">
+    <!-- LIST FOR BOTH collections with list -->
+      {{ range $index, $element := (.Paginator 2).Pages.ByPublishDate }} 
+            <div class="w-100-ns ph1-ns flex">
+              {{ .Render "li"}}
+            </div>
+      {{ end }}
+  </ul>
+  <!-- TODO: Pagination with numbers -->
+  {{ partial "pagination" . }}
+</div>
+
+{{end}}

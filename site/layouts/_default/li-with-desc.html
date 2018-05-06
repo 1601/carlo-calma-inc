@@ -1,13 +1,14 @@
-<a href="{{ .Permalink }}" class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
-	{{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
-	<h2 class="f3 b lh-title mb1 primary">{{ .Params.headline }}</h2>
-	<h2 class="f3 b lh-title mb1 primary">{{ .Params.subheadline }}</h2>
-	<!-- <p class="mid-gray lh-title mb2">{{ .Date.Format "Mon, Jan 2, 2006" }}</p> -->
-	<!-- <p>{{ .Content }}</p>  -->
-	<!-- Trim down content -->
-</a>
-<div class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
-		<p>{{ .Content | safeHTML |truncate 50 }}</p>
-		<p class="link b dib black mb0">Read more →</p> 		
-</div>
+<div class="no-underline raise w-100 relative">
 
+	{{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
+
+	<div class="absolute bottom-0 w-100 bottom-1">
+		<h2 class="f5 f4-ns white tc">{{ .Params.headline }}</h2>
+		<h2 class="f6 f5-ns white tc">{{ .Params.subheadline }}</h2>
+	</div>
+
+</div>
+<div class="more-container">
+	{{ .Content | safeHTML | truncate 150 }} 
+	<span class="white"> More > </span>				
+</div>

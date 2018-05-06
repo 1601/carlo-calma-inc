@@ -1,21 +1,14 @@
 {{ define "main" }}
 
-<!-- {{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" .Title) }} -->
-<div class="mw7 center bg-grey-4">
+<div class="mw-100 mw6-ns center bg-grey-4 mt2 mb-3">
     
-  <ul class="flex-ns flex-wrap mhn1-ns pa3">
-    <!-- LIST FOR Journal collection 
-          Items have description with a More link
-          shows Content for more on Click
-          Paginated by 3
-      -->
+    <!-- LIST FOR Journal collection Items have description with a More link, shows Content for more on Click, Paginated by 3 -->
       {{ range $index, $element := (.Paginator 3).Pages.ByPublishDate }} 
-            <div class="w-100-ns ph1-ns flex">
+      <div class="w-100 mb-3">
               {{ .Render "li-with-desc"}}
             </div>           
       {{ end }}
-  </ul>
-  <!-- TODO: Pagination with numbers -->
+      
   {{ partial "pagination" . }}
 </div>
 

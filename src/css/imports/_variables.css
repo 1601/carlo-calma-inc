@@ -93,6 +93,11 @@ footer.Home {
     position: absolute; */
 }
 
+.more-container p, .more-container span 
+{
+	display: inline-block;
+}
+
 @media (--breakpoint-not-small) {
 	footer.Home { 
 		bottom: -10%;

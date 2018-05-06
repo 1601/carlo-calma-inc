@@ -60,21 +60,7 @@ collections: # A list of collections the CMS should be able to edit
         label: "Footer"
         name: "footer"
         fields:
-         - name: "params"
-           label: "Params"
-           widget: "object"
-           fields:
-              - name: "tiles"
-                label: "Tiles"
-                widget: "object"
-                fields:
-                  - {label: "Enable", name: "enable", widget: "boolean"}
-                  - name: "showcase"
-                    label: "Showcase Items"
-                    widget: "list"
-                    create: true # Allow users to create new documents in this collection
-                    fields:
-                      - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Sub Title", name: "subtitle", widget: "string" }
-                      - { label: "Image", name: "image", widget: "image", required: false }
-                      - { label: "URL", name: "url", widget: "string" }
+         - {label: "Address1", name: "address1", widget: "string"}
+         - {label: "Address2", name: "address2", widget: "string"}
+         - {label: "Phone Number", name: "phonenumber", widget: "string"}
+         - {label: "Email Address", name: "emailaddress", widget: "string"}

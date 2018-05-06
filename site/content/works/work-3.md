@@ -1,5 +1,5 @@
 ---
-title: Work 3
+title: Working 3
 date: '2013-06-04T10:25:21+08:00'
 headline: Fish Museum
 subheadline: Davao 2013

@@ -62,6 +62,10 @@ img {
 	margin: 0 0.5rem;
 }
 
+.single-work img {
+	margin: 1rem 0;
+}
+
 .logotext-nav {
 	width: max-content;
 }

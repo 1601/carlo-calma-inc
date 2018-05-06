@@ -68,3 +68,17 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Address2", name: "address2", widget: "string"}
               - {label: "Phone Number", name: "phonenumber", widget: "string"}
               - {label: "Email Address", name: "emailaddress", widget: "string"}
+       - file: "site/data/socialmedia.toml"
+          label: "Social Media Links"
+          name: "socialmedia"
+          fields:
+            - name: "params"
+              label: "Params"
+              widget: "object"
+              fields:
+                - {label: "facebook", name: "facebook", widget: "string"}
+                - {label: "twitter", name: "twitter", widget: "string"}
+                - {label: "pinterest", name: "pinterest", widget: "string"}
+                - {label: "reddit", name: "reddit", widget: "string"}
+                - {label: "linkedin", name: "linkedin", widget: "string"}
+                - {label: "tumblr", name: "tumblr", widget: "string"}

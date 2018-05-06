@@ -60,7 +60,11 @@ collections: # A list of collections the CMS should be able to edit
         label: "Footer"
         name: "footer"
         fields:
-         - {label: "Address1", name: "address1", widget: "string"}
-         - {label: "Address2", name: "address2", widget: "string"}
-         - {label: "Phone Number", name: "phonenumber", widget: "string"}
-         - {label: "Email Address", name: "emailaddress", widget: "string"}
+          - name: "params"
+            label: "Params"
+            widget: "object"
+            fields:
+              - {label: "Address1", name: "address1", widget: "string"}
+              - {label: "Address2", name: "address2", widget: "string"}
+              - {label: "Phone Number", name: "phonenumber", widget: "string"}
+              - {label: "Email Address", name: "emailaddress", widget: "string"}

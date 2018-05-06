@@ -1,4 +1,4 @@
-<nav class="overflow-x-scroll overflow-x-visible-ns bg-grey-4 relative {{ .Title }}">
+<nav class="overflow-x-scroll overflow-x-visible-ns bg-grey-4 relative {{ .Title }} flex justify-between w-100">
 
 	<!-- Container for left navigation part -->
 	<div class="left-nav">
@@ -9,19 +9,22 @@
 			<!-- Primary Nav -->
 			<ul class="tr lh-0">
 				<!-- TODO: EDITABLE -->
-				<li class="dib"><a href="/works" class="link dim grey-2 f6 f5-ns mr1 ttu">Works</a></li>
+				<li class="dib"><a href="/works" class="link dim grey-2 f6 f5-ns mr1 ttu works-{{.Title}}">Works</a></li>
 
-				<li class="dib"><a href="/journal" class="link dim grey-2 f6 f5-ns mr1 ttu">Journal</a></li>
+				<li class="dib"><a href="/journal" class="link dim grey-2 f6 f5-ns mr1 ttu journal-{{.Title}}">Journal</a></li>
 
-				<li class="dib"><a href="/about" class="link dim grey-2 f6 f5-ns mr1 ttu">About</a></li>
-				<li class="dn dib-ns">
-					<input type="text" placeholder="Search">
+				<li class="dib"><a href="/about" class="link dim grey-2 f6 f5-ns mr1 ttu about-{{.Title}}">About</a></li>
+
+				<li class="dib not-in-{{ .Title }} dn-l">
+					<input type="text" placeholder="Search" class="search"/>
 				</li>
 
 			</ul>
 		</div>
 
 		<!-- Logo TODO: EDITABLE -->
-		<img src="/img/favicon-32x32.png" alt="Carlo Calma Consultancy Inc. Logo" class="dn dib-ns"/>
+		<img src="/img/carlo-logo.png" alt="Carlo Calma Consultancy Inc. Logo" class="dib not-in-{{ .Title }} logo-calma"/>
 	</div>
+
+	<input type="text" placeholder="Search" class="search ma2 dn dib-ns"/>
 </nav>

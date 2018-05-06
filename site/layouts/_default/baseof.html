@@ -1,9 +1,12 @@
 <!doctype html>
 <html lang="en" class="{{ .Title }}">
   {{ partial "head" . }}
-  <body class="sans-serif">
+  <body class="sans-serif" style="display:none;">
     {{ partial "nav" . }}
     {{ block "main" . }}{{ end }} 
     {{ partial "footer" . }} 
+    <script>
+      window.onload = function () { document.body.style["display"] = "block"; }
+    </script>
   </body>
 </html>

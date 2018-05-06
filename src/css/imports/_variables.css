@@ -57,6 +57,33 @@ html.Home {
 	background-color: black;
 }
 
+.not-in-Home {
+	display:none;
+}
+
+.works-Works, .journal-Journals, .about-About {
+	color: black;
+}
+
+.search {
+	/* static widths */
+	padding: 0;
+    width: 111px;
+    background-color:rgba(209,211,212,1);
+    height: .9rem;
+    border-radius: 0;
+	line-height: 0;
+}
+
+.search::focus {
+	border: black solid 1px;
+}
+
+input::-webkit-input-placeholder {
+	font-size: .7rem;
+	color: rgb(182, 176, 173);
+}
+
 .lh-0 {
 	line-height: 0;
 }
@@ -72,6 +99,10 @@ html.Home {
 		/* fill width
 		if width is greater than original stretch*/
 		height: 80vh;
+	}
+
+	.logo-calma {
+		display:inline-block;
 	}
 }
 
@@ -91,7 +122,7 @@ Colors:
 
 :root {
 	/* Colors */
-	--primary: rgba(255, 68, 0, 1);
+	--primary: rgba(0, 0, 0, 1);
 	--highlight: rgba(254, 213, 198, 1);
 	--white: rgba(255, 255, 255, 1);
 	--off-white: rgba(255, 253, 252, 1);

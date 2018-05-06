@@ -1,3 +1,11 @@
+baseURL: https://yoursite.example.com/
+footnoteReturnLinkContents: ↩
+params:
+  AuthorName: Jon Doe
+  GitHubUser: spf13
+  ListOfFoo:
+  - foo1
+  - foo2
 backend:
   name: git-gateway
 
@@ -45,3 +53,14 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Headline, name: headline, widget: string}
           - {label: Subheadline, name: subheadline, widget: string}
           - {label: Body, name: body, widget: markdown}
+  - name: "component"
+    label: "Components"
+    files:
+      - file: "site/data/_index.md"
+        label: "Etc."
+        name: "etc"
+        fields:
+          - {label: Address 1, name: address1, widget: string}
+          - {label: Address 2, name: address2, widget: string}
+          - {label: Phone Number, name: phonenumber, widget: string}
+          - {label: Email Address, name: emailaddress, widget: string}

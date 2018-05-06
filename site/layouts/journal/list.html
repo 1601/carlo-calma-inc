@@ -5,17 +5,15 @@
 <div class="mw7 center">
     
   <ul class="flex-ns flex-wrap mhn1-ns pa3">
-    <!-- LIST FOR BOTH collections with list -->
-      {{ range $index, $element := (.Paginator 2).Pages.ByPublishDate }} 
-          {{ if (eq $index 0) }}
+    <!-- LIST FOR Journal collection 
+          Items have description with a More link
+          shows Content for more on Click
+          Paginated by 3
+      -->
+      {{ range $index, $element := (.Paginator 3).Pages.ByPublishDate }} 
             <div class="w-100-ns ph1-ns flex">
               {{ .Render "li-with-desc"}}
-            </div>
-          {{ else }}
-            <div class="w-100-ns ph1-ns flex">
-              {{ .Render "li"}}
-            </div>
-          {{ end }} 
+            </div>           
       {{ end }}
   </ul>
   <!-- TODO: Pagination with numbers -->

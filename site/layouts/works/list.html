@@ -4,7 +4,7 @@
 <div class="mw7 center">
     
   <ul class="flex-ns flex-wrap mhn1-ns pa3">
-    <!-- LIST FOR BOTH collections with list -->
+      <!-- List for Works Collection - Paginated with 5 -->
       {{ range $index, $element := (.Paginator 2).Pages.ByPublishDate }} 
             <div class="w-100-ns ph1-ns flex">
               {{ .Render "li"}}

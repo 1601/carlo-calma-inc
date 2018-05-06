@@ -66,8 +66,17 @@ img {
 	margin: 1rem 0;
 }
 
-.about-page p {
+.about-page > p {
 	margin: 1rem 0.5rem;
+}
+
+.about-page > blockquote {
+	margin:0 0.5rem;
+}
+
+.about-page > blockquote > p {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 .logotext-nav {

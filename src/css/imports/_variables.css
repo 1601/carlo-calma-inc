@@ -50,6 +50,23 @@ footer.Home {
 .lh-0 {
 	line-height: 0;
 }
+
+.fluid img {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: none;
+}
+
+@media (--breakpoint-not-small) {
+	.fluid img {
+/* 		
+		margin-left: 0;
+		transform: translateX(-50%); */
+	}
+}
+
+
+
 /* 
 Colors:
 	Logo text:  white 

@@ -93,10 +93,25 @@ footer.Home {
     position: absolute; */
 }
 
-.more-container p, .more-container span 
+/* .more-container p, .more-container span 
 {
 	display: inline-block;
+} */
+
+/* journal toggle */
+
+.more-container.animate > .full-content, .more-container > .truncated,
+.more-container.animate > .less-caption, .more-container > .more-caption {
+	display: block;
+	transition: all 2s linear;
 }
+
+.more-container > .full-content, .more-container.animate > .truncated,
+.more-container > .less-caption, .more-container.animate > .more-caption{
+	display: none;
+	transition: all 2s linear;
+}
+
 
 @media (--breakpoint-not-small) {
 	footer.Home { 

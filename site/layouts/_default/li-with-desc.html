@@ -1,4 +1,4 @@
-<div class="no-underline raise w-100 relative">
+<div class="no-underline w-100 relative">
 
 	{{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
 
@@ -9,6 +9,15 @@
 
 </div>
 <div class="more-container">
-	{{ .Content | safeHTML | truncate 150 }} 
-	<span class="white"> More > </span>				
+	<div class="truncated">
+		{{ .Content | safeHTML | truncate 150 }} 
+	</div>
+	<div class="full-content">
+		{{ .Content }} 
+		<div class="center w-100 tc">
+			{{ partial "social-icon" .}}
+		</div>
+	</div>
+	<span class="white more-caption"> More > </span>
+	<span class="white less-caption"> Less < </span>				
 </div>

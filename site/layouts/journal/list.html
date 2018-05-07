@@ -1,15 +1,37 @@
 {{ define "main" }}
 
-<div class="mw-100 mw6-ns center bg-grey-4 mt2 mb-3">
+<div class="mw-100 mw6-ns center bg-grey-4 mt2 mb-3" id="journal-entries">
     
     <!-- LIST FOR Journal collection Items have description with a More link, shows Content for more on Click, Paginated by 3 -->
       {{ range $index, $element := (.Paginator 3).Pages.ByPublishDate }} 
-      <div class="w-100 mb-3">
+      <div class="w-100 mb-3" >
               {{ .Render "li-with-desc"}}
-            </div>           
+      </div>           
       {{ end }}
-      
+
   {{ partial "pagination" . }}
 </div>
 
+
+<script>
+  var card = document.getElementById('journal-entries');
+
+  card.addEventListener("click", function(e) {
+    e.stopPropagation();
+    var cardElement = closest(e.target, function(el) {
+      return el.classList.contains('more-container');
+    });
+    if (cardElement)
+      cardElement.classList.toggle('animate');
+  }, false);
+
+  // getting the closest in the parent hierarchy
+  // reference: http://stackoverflow.com/questions/22100853/dom-pure-javascript-solution-to-jquery-closest-implementation
+  function closest(el, fn) {
+    while (el) {
+      if (fn(el)) return el;
+      el = el.parentNode;
+    }
+  }
+</script>
 {{end}}

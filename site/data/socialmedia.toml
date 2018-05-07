@@ -1,7 +1,7 @@
 [params]
-facebook = "fb.com"
-linkedin = "linkedin.com"
-pinterest = "pinterest.com"
-reddit = "reddit.com"
-tumblr = "tumblr.com"
-twitter = "twitter.com"
+facebook = "https://www.fb.com/"
+linkedin = "https://www.linkedin.com/"
+pinterest = "https://www.pinterest.com/"
+reddit = "https://www.reddit.com/"
+tumblr = "https://www.tumblr.com/"
+twitter = "https://www.twitter.com/"

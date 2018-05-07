@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="mw-100 mw6-ns center bg-grey-4 mt2 mb-3">
+<div class="mw-100 mw6-ns center bg-grey-4 mt2 mb-3 container-{{ .Title }}">
 
   <!-- List for Works Collection - Paginated with 5 -->
   {{ range $index, $element := (.Paginator 3).Pages.ByPublishDate }} 

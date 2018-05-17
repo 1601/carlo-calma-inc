@@ -4,22 +4,25 @@
 	<div class="left-nav">
 		<div class="logotext-nav dib">
 			<!-- Logo Text TODO: EDITABLE -->
-			<a href="/" class="white link f3 f2-ns lh-title ml1 ttu pointer"><span class="logo-font">Carlo Calma Consultancy Inc.</span></a>
+			<a href="/" class="white link f3 f2-ns lh-title ml1 ttu pointer dib"><span class="logo-font">Carlo Calma</span></a>
+			<div class="part2-logotext">
+				<a href="/" class="white link f3 f2-ns lh-title ttu pointer"><span class="logo-font">Consultancy Inc.</span></a>
+				<!-- Primary Nav -->
+				<div class="tr lh-0 flex justify-between">
+					<!-- TODO: EDITABLE -->
+					<div class=""><a href="/works" class="link dim grey-2 f6 f6-ns pointer ttu works-{{.Title}}">Works</a></div>
+	
+					<div class=""><a href="/process" class="link dim grey-2 f6 f6-ns pointer ttu journal-{{.Title}}">Process</a></div>
+	
+					<div class=""><a href="/about" class="link dim grey-2 f6 f6-ns pointer ttu about-{{.Title}}">About</a></div>
+	
+					<div class=" not-in-{{ .Title }} dn-ns">
+						<input type="text" placeholder="Search" class="search"/>
+					</div>
+				</div>
+			</div>
 			
-			<!-- Primary Nav -->
-			<ul class="tr lh-0">
-				<!-- TODO: EDITABLE -->
-				<li class="dib mr2"><a href="/works" class="link dim grey-2 f6 f6-ns mr1 pointer ttu works-{{.Title}}">Works</a></li>
-
-				<li class="dib mr2"><a href="/journal" class="link dim grey-2 f6 f6-ns mr1 pointer ttu journal-{{.Title}}">Journal</a></li>
-
-				<li class="dib mr2"><a href="/about" class="link dim grey-2 f6 f6-ns mr1 pointer ttu about-{{.Title}}">About</a></li>
-
-				<li class="dib not-in-{{ .Title }} dn-ns">
-					<input type="text" placeholder="Search" class="search"/>
-				</li>
-
-			</ul>
+			
 		</div>
 
 		<!-- Logo TODO: EDITABLE -->

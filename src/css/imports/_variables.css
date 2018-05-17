@@ -38,6 +38,14 @@ html, body {
 	background-color: rgba(188, 190, 192, 1);
 }
 
+div.logotext-nav > a.dib {
+	vertical-align: top;
+}
+
+.part2-logotext {
+	display: inline-block;
+}
+
 .mb-1 {
 	margin-bottom: 1rem;
 }

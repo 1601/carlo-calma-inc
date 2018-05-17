@@ -16,9 +16,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Subheadline", name: "subheadline", widget: "string"}
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "journal" 
-    label: "Journal" 
-    folder: "site/content/journal" 
+  - name: "process" 
+    label: "Process" 
+    folder: "site/content/process" 
     create: true 
     fields: 
       - {label: "Title", name: "title", widget: "string"}

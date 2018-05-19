@@ -76,10 +76,14 @@ img {
 
 .about-page > p {
 	margin: 1rem 0.5rem;
+    width: 120%;
+    margin-left: -2rem;
 }
 
 .about-page > blockquote {
 	margin:0 0.5rem;
+	width: 120%;
+    margin-left: -2rem;
 }
 
 .about-page > blockquote > p {
@@ -144,6 +148,10 @@ nav.Home {
 
 html.Home {
 	background-color: black;
+}
+
+.logotext-nav a:focus {
+	transform: none;
 }
 
 .d-ligatures {
@@ -220,17 +228,17 @@ input::-webkit-input-placeholder {
 
 	.container-Works {
 		/* good for 1440 */
-		margin-left: 9.5rem;
+		margin-left: 10rem;
 	}
 	
-	.container-Journals {
+	.container-Processes {
 		/* good for 1440 */
-		margin-left: 13.5rem;
+		margin-left: 14rem;
 	}
 	
 	.container-About {
 		/* good for 1440 */
-		margin-left: 18rem;
+		margin-left: 19rem;
 	}
 }
 

@@ -1,7 +1,7 @@
 ---
 title: Working now
 date: '2013-06-04T10:25:21+08:00'
-headline: Fish Museum
+headline: Boolean house
 subheadline: Davao 2013
 image: /img/home-jumbotron.jpg
 ---

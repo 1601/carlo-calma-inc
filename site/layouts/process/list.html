@@ -1,7 +1,6 @@
 {{ define "main" }}
 
 <div class="mw-100 mw6-ns center bg-grey-4 mt2 mb-3 container-{{ .Title }}" id="process-entries">
-    {{ if .Data }}
     <!-- LIST FOR Journal collection Items have description with a More link, shows Content for more on Click, Paginated by 3 -->
       {{ range $index, $element := (.Paginator 3).Pages.ByPublishDate }} 
       <div class="w-100 mb-3" >
@@ -9,10 +8,7 @@
       </div>           
       {{ end }}
 
-      {{ partial "pagination" . }}
-    {{ else }}
-      <p>No available process.</p>
-    {{ end }}
+      {{ partial "pagination" . }}    
 </div>
 
 

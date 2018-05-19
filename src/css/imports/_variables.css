@@ -146,6 +146,14 @@ html.Home {
 	background-color: black;
 }
 
+.d-ligatures {
+	font-variant-ligatures: discretionary-ligatures;
+}
+
+.footer-right {
+	margin-left: auto;
+    margin-top: 0.5rem;
+}
 /* remove from page */
 .not-in-Home {
 	display:none;

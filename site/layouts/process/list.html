@@ -1,11 +1,11 @@
 {{ define "main" }}
 
-<div class="mw-100 mw6-ns center bg-grey-4 mt2 mb-3 container-{{ .Title }}" id="journal-entries">
+<div class="mw-100 mw6-ns center bg-grey-4 mt2 mb-3 container-{{ .Title }}" id="process-entries">
     
     <!-- LIST FOR Journal collection Items have description with a More link, shows Content for more on Click, Paginated by 3 -->
       {{ range $index, $element := (.Paginator 3).Pages.ByPublishDate }} 
       <div class="w-100 mb-3" >
-              {{ .Render "li-with-desc"}}
+              {{ .Render "embedded-youtube"}}
       </div>           
       {{ end }}
 
@@ -14,24 +14,40 @@
 
 
 <script>
-  var card = document.getElementById('journal-entries');
+  // Find all YouTube videos
+  var $allVideos = $("iframe[src^='//www.youtube.com']"),
 
-  card.addEventListener("click", function(e) {
-    e.stopPropagation();
-    var cardElement = closest(e.target, function(el) {
-      return el.classList.contains('more-container');
-    });
-    if (cardElement)
-      cardElement.classList.toggle('animate');
-  }, false);
+  // The element that is fluid width
+  $fluidEl = $("body");
 
-  // getting the closest in the parent hierarchy
-  // reference: http://stackoverflow.com/questions/22100853/dom-pure-javascript-solution-to-jquery-closest-implementation
-  function closest(el, fn) {
-    while (el) {
-      if (fn(el)) return el;
-      el = el.parentNode;
-    }
-  }
+  // Figure out and save aspect ratio for each video
+  $allVideos.each(function() {
+
+  $(this)
+  .data('aspectRatio', this.height / this.width)
+
+  // and remove the hard coded width/height
+  .removeAttr('height')
+  .removeAttr('width');
+
+  });
+
+  // When the window is resized
+  $(window).resize(function() {
+
+  var newWidth = $fluidEl.width();
+
+  // Resize all videos according to their own aspect ratio
+  $allVideos.each(function() {
+
+  var $el = $(this);
+  $el
+  .width(newWidth)
+  .height(newWidth * $el.data('aspectRatio'));
+
+  });
+
+  // Kick off one resize to fix all videos on page load
+  }).resize();
 </script>
 {{end}}

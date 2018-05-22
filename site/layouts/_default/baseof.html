@@ -1,14 +1,31 @@
 <!doctype html>
 <html lang="en" class="{{ .Title }}">
   {{ partial "head" . }}
-  <body class="sans-serif relative" style="display:none;">
+  <body class="sans-serif relative" style="display: hidden;">
     <script src="https://unpkg.com/lunr/lunr.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     {{ partial "nav" . }}
     {{ block "main" . }}{{ end }} 
     {{ partial "footer" . }} 
     <script>
-      window.onload = function () { document.body.style["display"] = "block"; }
+      $(document).ready(function() {
+
+        document.body.style["display"] = "block";
+        // get the #section from the URL
+        var hash = window.location.hash; 
+      
+        console.log(hash);
+
+        // scroll to accordion
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 'slow');
+
+        // open accordion
+        setTimeout(function(){
+          $(hash).parent().addClass('animate');
+        }, 1000);
+      });
     </script>
   </body>
 </html>

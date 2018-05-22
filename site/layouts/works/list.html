@@ -7,29 +7,33 @@
           {{ .Render "li-with-desc"}}
         </div>
   {{ end }}
-  <!-- TODO: Pagination with numbers -->
   {{ partial "pagination" . }}
 </div>
 
 <script>
-  var card = document.getElementById('work-entries');
+  $(".more-container").on('click', function(e) {
+      e.preventDefault();
+      $(this).toggleClass("animate");
+      $(".more-container").not(this).removeClass('animate');
+      var hash1 = $(this).children(":first").attr('id');
+      console.log(hash1);
+      
+      // Move when the longer view above is closed and the content goes up
+      setTimeout(function(){
+    
+        if (!isInView("#".concat(hash1))) {
 
-  card.addEventListener("click", function(e) {
-    e.stopPropagation();
-    var cardElement = closest(e.target, function(el) {
-      return el.classList.contains('more-container');
-    });
-    if (cardElement)
-      cardElement.classList.toggle('animate');
-  }, false);
+          $('html, body').animate({
+              scrollTop: $("#".concat(hash1)).offset().top
+          }, 'slow');
+        
+        }
+      }, 1000);
 
-  // getting the closest in the parent hierarchy
-  // reference: http://stackoverflow.com/questions/22100853/dom-pure-javascript-solution-to-jquery-closest-implementation
-  function closest(el, fn) {
-    while (el) {
-      if (fn(el)) return el;
-      el = el.parentNode;
-    }
+  });
+
+  function isInView(elem){
+   return $(elem).offset().top - $(window).scrollTop() < $(elem).height() ;
   }
 </script>
 {{end}}

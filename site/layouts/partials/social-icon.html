@@ -1,20 +1,22 @@
+{{ $url := urls.Parse .Permalink }}
+{{ $tag := split $url.Path "/"}}
 <ul class="socialicons-list">
   <li class="dib">
-    <a href="http://www.facebook.com/sharer.php?u={{.Parent.Permalink}}" target="_blank" class="link pointer dib facebook">{{.Site.Title}}</a>
+    <a href="http://www.facebook.com/sharer.php?u={{substr .Parent.Permalink 0 -1}}%23{{(index $tag 2)}}" target="_blank" class="link pointer dib facebook"></a>
   </li>
   <li class="dib">
-    <a href="{{ .Site.Data.socialmedia.params.twitter }}" class="link pointer dib twitter"></a>
+    <a href="https://twitter.com/share?url={{substr .Parent.Permalink 0 -1}}%23{{(index $tag 2)}}&amp;text=Check this out {{ .Params.headline }}&amp;hashtags=carlocalma,architecture,consultancy" target="_blank" class="link pointer dib twitter"></a>
   </li>
   <li class="dib">
-    <a href="{{ .Site.Data.socialmedia.params.pinterest }}" class="link pointer dib pinterest"></a>
+    <a href="https://pinterest.com/pin/create/button/?url={{substr .Parent.Permalink 0 -1}}%23{{(index $tag 2)}}&media={{.Site.BaseURL}}{{ .Params.image }}&description={{ .Params.headline }}" target="_blank" class="link pointer dib pinterest"></a>
   </li>
   <li class="dib">
-    <a href="{{ .Site.Data.socialmedia.params.reddit }}" class="link pointer dib reddit"></a>
+    <a href="http://reddit.com/submit?url={{substr .Parent.Permalink 0 -1}}%23{{(index $tag 2)}}&amp;title={{.Params.headline}}" target="_blank" class="link pointer dib reddit"></a>
   </li>
   <li class="dib">
-    <a href="{{ .Site.Data.socialmedia.params.linkedin }}" class="link pointer dib linkedin"></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{substr .Parent.Permalink 0 -1}}%23{{(index $tag 2)}}" target="_blank" class="link pointer dib linkedin"></a>
   </li>
   <li class="dib">
-    <a href="{{ .Site.Data.socialmedia.params.tumblr }}" class="link pointer dib tumblr"></a>
+    <a href="http://www.tumblr.com/share/link?url={{substr .Parent.Permalink 0 -1}}%23{{(index $tag 2)}}&amp;{{.Params.headline}}" target="_blank" class="link pointer dib tumblr"></a>
   </li>
 </ul>

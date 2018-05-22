@@ -1,23 +1,30 @@
-<div class="no-underline w-100 relative">
-
-	{{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
-
-	<div class="absolute bottom-0 w-100 bottom-1">
-		<h2 class="f5 f4-ns white tc ttu d-ligatures">{{ .Params.headline }}</h2>
-		<h2 class="f6 f5-ns white tc">{{ .Params.subheadline }}</h2>
-	</div>
-
-</div>
+{{ $url := urls.Parse .Permalink }}
+{{ $tag := split $url.Path "/"}}
 <div class="more-container">
-	<div class="truncated">
-		{{ .Content | safeHTML | truncate 150 }} 
+
+	<div class="no-underline w-100 relative img-box" id="{{(index $tag 2)}}">
+
+		{{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
+
+		<div class="absolute bottom-0 w-100 bottom-1 truncated">
+
+			<h2 class="f5 f4-ns white tc ttu d-ligatures">{{ .Params.headline }}</h2>
+			<h2 class="f6 f5-ns white tc">{{ .Params.subheadline }}</h2>
+
+		</div>
+
 	</div>
+
 	<div class="full-content">
+
+		<h2 class="f5 f4-ns tc ttu d-ligatures">{{ .Params.headline }}</h2>
+		<h2 class="f6 f5-ns tc mb3">{{ .Params.subheadline }}</h2>
+
 		{{ .Content }} 
 		<div class="center w-100 tc">
+
 			{{ partial "social-icon" .}}
 		</div>
-	</div>
-	<span class="white more-caption"> More > </span>
-	<span class="white less-caption"> Less < </span>				
+
+	</div>				
 </div>

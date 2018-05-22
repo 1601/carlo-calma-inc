@@ -122,14 +122,12 @@ from {opacity: 1;}
 to {opacity: 0;}
 }
 
-.more-container.animate > .full-content, .more-container > .truncated,
-.more-container.animate > .less-caption, .more-container > .more-caption {
+.more-container.animate > .full-content, .more-container > .img-box > .truncated {
 	display: block;
 	animation: showUsMore 1000ms ease-in-out both;
 }
 
-.more-container > .full-content, .more-container.animate > .truncated,
-.more-container > .less-caption, .more-container.animate > .more-caption{
+.more-container > .full-content, .more-container.animate > .img-box > .truncated {
 	display: none;
 	animation: hideUsMore 1000ms ease-in-out both;
 }

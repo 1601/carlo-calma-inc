@@ -71,3 +71,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "reddit", name: "reddit", widget: "string"}
               - {label: "linkedin", name: "linkedin", widget: "string"}
               - {label: "tumblr", name: "tumblr", widget: "string"}
+      - label: "Porfolio PDF"
+        name: "portfolio_pdf"
+        widget: "file"
+        default: "site/uploads/portfolio.pdf"

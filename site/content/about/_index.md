@@ -3,6 +3,7 @@ title: About
 image: /img/celebrity-20161003230555-calma2cjuancarlo.jpg
 headline: Carlo Calma Consultancy Inc.
 subheadline: 2009 onwards
+portfolio_pdf: /img/portfolio123.pdf
 ---
 Carlo Calma Consultancy Inc. was incubated in 2009 for the need to push boundaries in design thinking, architectural practice and construction spearheaded by a diverse team of theorists, artists, architects and engineers.
 

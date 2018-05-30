@@ -5,6 +5,61 @@
     <h2 class="f5 f5-ns tc mb-1">{{ .Params.subheadline }}</h2>
     <div class="about-page mb4">
         {{ .Content }}
+        <h4>Register to download Carlo Calma's Portfolio</h4>
+        <form id='user_info'>
+          <div class="flex start mb1">
+            <p for="name" class="w-25">Name</p>
+            <input type="text" name="name" id="name" required/>
+          </div>
+          <div class="flex start mb1">
+            <p for="email" class="w-25">Email Address</p>
+            <input type="text" name="email" id="email" required/> 
+          </div>
+          <div class="flex start mb1">
+            <p for="contactNumber" class="w-25">Contact Number</p>
+            <input type="text" name="contactNumber" id="contactNumber">
+          </div>
+          <div>
+            <p for="message">Message</p>
+            <textarea name="message" rows="8" cols="40"></textarea>
+          </div>
+          <p id="downloadTrigger" style="display: none;"> Click <a href="{{ substr .Site.BaseURL 0 -1 }}{{ .Params.portfolio_pdf }}" target="_blank">this</a> if the download didn't automatically occured.</p>
+          <div>
+            <input type="submit" name="submitButton" value="Download Portfolio" id="submitButton">
+          </div>
+          
+        </form>
     </div>
+    
+    
+
+    <script>
+    var myform = $("form#user_info");
+    myform.submit(function(e) {
+      e.preventDefault();
+      var params = myform.serializeArray().reduce(function(obj, item) {
+        obj[item.name] = item.value;
+        return obj;
+      }, {});
+      console.log(JSON.stringify(params));
+      console.log("{{ substr .Site.BaseURL 0 -1 }}{{ .Params.portfolio_pdf }}");
+      myform.find("#submitButton").val("Sending...");
+
+      emailjs.send("sendgrid","template_UJesHddA11",params)
+      .then(function(response) {
+        console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+        myform.find("#submitButton").val("Download Portfolio");
+        // Download portfolio
+        window.open('{{ substr .Site.BaseURL 0 -1 }}{{ .Params.portfolio_pdf }}','_blank');
+        myform.find("#downloadTrigger").show();
+      }, function(err) {
+        console.log("FAILED. error=", err);
+        myform.find("#submitButton").val("Download Portfolio");
+      });
+    });
+
+    
+    </script>
+
   </div>
 {{ end }}

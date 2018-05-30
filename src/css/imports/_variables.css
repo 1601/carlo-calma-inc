@@ -74,16 +74,18 @@ img {
 	margin: 1rem 0;
 }
 
-.about-page > p {
+.about-page > p, 
+.about-page > h4, 
+.about-page > form {
 	margin: 1rem 0.5rem;
-    width: 120%;
-    margin-left: -2rem;
+    width: 110%;
+    margin-left: -1rem;
 }
 
 .about-page > blockquote {
 	margin:0 0.5rem;
-	width: 120%;
-    margin-left: -2rem;
+	width: 110%;
+    margin-left: -1rem;
 }
 
 .about-page > blockquote > p {
@@ -132,10 +134,28 @@ to {opacity: 0;}
 	animation: hideUsMore 1000ms ease-in-out both;
 }
 
+.more-container > .full-content > p, 
+.more-container > .full-content > ul, 
+.more-container > .full-content > h1, 
+.more-container > .full-content > h2, 
+.more-container > .full-content > h3, 
+.more-container > .full-content > h4, 
+.more-container > .full-content > h5, 
+.more-container > .full-content > h6, 
+.more-container > .full-content > span, 
+.more-container > .full-content > blockquote {
+  width: 110%;
+  margin-left: -1rem;
+}
+
+.more-container > .full-content > p > img {
+  margin-left: 1rem;
+}
+
 
 @media (--breakpoint-not-small) {
 	footer.Home { 
-		bottom: -10%;
+		bottom: -3rem;
 		color: white;
 	}
 }
@@ -172,11 +192,13 @@ html.Home {
 .search {
 	/* static widths */
 	padding: 0;
-    width: 80px;
-    background-color:rgba(209,211,212,1);
-    height: .9rem;
-    border-radius: 0;
-	line-height: 0;
+  /* width: 80px; */
+  background-color:rgba(209,211,212,1);
+  height: .9rem;
+  border-radius: 0;
+  line-height: 0;
+  margin-top: 1.2rem;
+  width: auto;
 }
 
 .link:hover {

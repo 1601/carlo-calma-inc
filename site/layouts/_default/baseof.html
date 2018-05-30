@@ -1,5 +1,11 @@
 <!doctype html>
 <html lang="en" class="{{ .Title }}">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("user_g2qxNcAcxrthv3d8vA87k");
+    })();
+  </script>
   {{ partial "head" . }}
   <body class="sans-serif relative" style="display: hidden;">
     <script src="https://unpkg.com/lunr/lunr.js"></script>
@@ -13,9 +19,9 @@
         document.body.style["display"] = "block";
         // get the #section from the URL
         var hash = window.location.hash; 
-      
+      if( hash ){
         console.log(hash);
-
+        
         // scroll to accordion
         $('html, body').animate({
             scrollTop: $(hash).offset().top
@@ -25,6 +31,8 @@
         setTimeout(function(){
           $(hash).parent().addClass('animate');
         }, 1000);
+      }
+        
       });
     </script>
   </body>

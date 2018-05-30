@@ -11,24 +11,25 @@
 </div>
 
 <script>
-  $(".more-container").on('click', function(e) {
+  $(".more-container > .img-box").on('click', function(e) {
       e.preventDefault();
-      $(this).toggleClass("animate");
-      $(".more-container").not(this).removeClass('animate');
-      var hash1 = $(this).children(":first").attr('id');
+      var element = $(this).parent();
+      element.toggleClass("animate");
+      $(".more-container").not(element).removeClass('animate');
+      var hash1 = $(element).children(":first").attr('id');
       console.log(hash1);
       
       // Move when the longer view above is closed and the content goes up
       setTimeout(function(){
     
-        if (!isInView("#".concat(hash1))) {
+        // if (!isInView("#".concat(hash1))) {
 
           $('html, body').animate({
               scrollTop: $("#".concat(hash1)).offset().top
           }, 'slow');
         
-        }
-      }, 1000);
+        // }
+      }, 500);
 
   });
 

@@ -55,6 +55,9 @@
 
 <script>
   $(document).ready(function() {
+
+    if(!$('nav#main').hasClass("Home")){
+
 			// grab the initial top offset of the navigation 
 		   	var stickyNavTop = $('nav#main').offset().top;
 
@@ -81,5 +84,7 @@
 			$(window).scroll(function() {
 				stickyNav();
 			});
+    }
+    
 		});
 </script>

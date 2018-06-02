@@ -17,7 +17,9 @@
 					<div class=""><a href="/about" class="link dim grey-2 f6 f6-ns pointer ttu about-{{.Title}}">About</a></div>
 	
 					<div class=" not-in-{{ .Title }} dn-ns">
-						<input type="text" placeholder="Search" class="search"/>
+              <form class="searchForm" method="get" action="/search/">
+                <input type="text" placeholder="Search" class="search" name="query"/>
+              </form>
 					</div>
 				</div>
 			</div>
@@ -31,7 +33,9 @@
 		</a>
 	</div>
 
-	<input type="text" placeholder="Search" class="search ma2 dn dib-ns not-in-{{ .Title }}"/>
+  <form class="searchForm" method="get" action="/search/">
+    <input type="text" placeholder="Search" name="query" class="search ma2 dn dib-ns not-in-{{ .Title }}"/>
+  </form>
 </nav>
 
 
@@ -47,7 +51,9 @@
         <div class="mt2"><a href="/about" class="link dim grey-2 f6 f6-ns pointer ttu about-{{.Title}}">About</a></div>
 
         <div class=" not-in-{{ .Title }} ">
-          <input type="text" placeholder="Search" class="search-sticky mt2"/>
+          <form class="searchForm" method="get" action="/search/">
+            <input type="text" placeholder="Search" class="search-sticky mt2" name="query"/>
+          </form>
         </div>
     </div>
 
@@ -55,6 +61,7 @@
 
 <script>
   $(document).ready(function() {
+
 
     if(!$('nav#main').hasClass("Home")){
 

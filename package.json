@@ -10,7 +10,7 @@
     "build-preview": "gulp build-preview",
     "start": "gulp server",
     "lint": "eslint src",
-    "index": "hugo-lunr -i \"site/content/**\" -o site/static/my-index.json"
+    "index": "hugo-lunr -i \"site/content/**\" -o site/static/uploads/my-index.json"
   },
   "author": "",
   "license": "MIT",

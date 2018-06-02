@@ -12,12 +12,16 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     {{ partial "nav" . }}
 
+    <div class="mw-100 mw6-ns center bg-grey-4 mt5 mb-3 container-{{ .Title }}">
+      <h3>Search: <input id="search" type="text" id="searchbox" placeholder="Search the site"></h3>
+      
+  
+      
+      <ul id="results" class="mt4"></ul>
 
-    <h3>Search:</h3>
-    <input id="search" type="text" id="searchbox" placeholder="Just start typing...">
- 
-    <h3>Results:</h3>
-    <ul id="results"></ul>
+    </div>
+
+  <!-- End of search body -->
  
     <!-- <script type="text/javascript" src="/js/lunr.js"></script> -->
     <script type="text/javascript">
@@ -106,13 +110,12 @@
         // Only show the ten first results
         results.slice(0, 100).forEach(function(result) {
 
-          // Find the title
-            result.content
+          // TODO: error in loading on load results ( only results to one the first one)
 
-            var $result = $("<li>");
+            var $result = $("<li class='ml3 mt2'>");
             $result.append($("<a>", {
-                href: result.uri,
-                text: "» " + result.content.slice(11, result.content.slice(4).indexOf("\n") + 4)
+                href: result.uri.replace("_index", ""),
+                text: "" + result.content.slice(11, result.content.slice(4).indexOf("\n") + 4)
             }));
             $results.append($result);
         });
@@ -133,13 +136,14 @@
         if(searchTerm) {
           $("#search").val(searchTerm); 
           // Only trigger a search when 2 chars. at least have been provided
-          var query = $("#search").val();
+          var query = searchTerm;
             if (query.length < 2) {
                 return;
             }
  
             var results = search('boolean');
- 
+            console.log('Start Up');
+            console.log(results);
             renderResults(results);
         }
         }, 1000);

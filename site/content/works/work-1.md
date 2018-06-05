@@ -1,12 +1,8 @@
 ---
-title: Work 1
+title: Emerald House
 date: '2018-05-05T16:04:26+08:00'
-headline: Work 1 Headline
+headline: Emerald House
 subheadline: Manila 2018
-image: /img/og-image.jpg
+image: /img/emeraldhouse.jpg
 ---
-Hello this is work one **body**. 
-
-# Lorem Ipsum
-
-## Lorem ipsum
+The studio is immersed with local east culture – we are challenged that lots of Asian clients that do believe the scientific and some would argue folklore of the belief of “fengshui” (placement of things, objects and spaces) – as we continue to research this topic and identify – Democratically, I can say there are parallel philosophies in ventilation, earth atmosphere studies in lighting – and abstract notions of ideas that cant be seen such as – sweat, humidity, air particles whether hot (caused by machines) and cold (caused also by not only machines but also human conditions) – all of this and more are actually architectural conditions that began to study not only the relationship of human beings to the environment but also other phenomena such as but not exclusive to star alignment, horoscope and numerology. This psyche of human perception, permutations and genealogy interests us not only in the human scale but also in the larger context in our population. This project begins to explore in lucky colors not that saturated in space but a define thesis of the project. Emerald green divined by their trusted “fengshui-master” – we used this color in the gate and the focal point of the house which is this floating staircase emulating a “Dragon” – which is again the dominant sign of the inhabitants. The use of matte, glossy, satin tones of emerald green was the strategy – percentage of sheens create these spaces of multi-sensory and shadow play. Every room is distinct and creates remnants of this devoured emerald aggregate – the main masters bedroom has a peephole that creates this kaleidoscopic effect, the room of the only daughter who is a jetsetter goes back to cave scenarios that looks like stalagmites and stalactites – that this jotted cylinder geometries not only mimic these investigations but actually become real functional paraphernalia such as lighting and shower. This intimacy that is inspired in nature is like a microscopic view of this gemstones with interesting fissures. The house is timid outside but as you enter and open this Pandora’s box – there is more to it than its white austere façade – it glows at its core – fetishizing the object that has qualities of curiosity as well as luxuriousness.

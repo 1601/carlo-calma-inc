@@ -1,5 +1,5 @@
 ---
-title: Work 2
+title: Brutalist House
 date: '2018-05-05T18:05:12+08:00'
 headline: Brutalist House
 subheadline: Istanbul 2015

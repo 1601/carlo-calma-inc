@@ -1,6 +1,6 @@
 ---
-title: Inside Zedd's $16 Million Mansion
+title: Coral World Marina
 date: '2018-05-19T18:12:32+08:00'
-youtubeVideoId: RF-Mqs2qC-M
+youtubeVideoId: 'https://youtu.be/ogfvO-nPCZI'
 ---
 

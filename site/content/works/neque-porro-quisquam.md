@@ -1,8 +1,8 @@
 ---
-title: Neque porro quisquam
+title: Galvanized House
 date: '2009-05-30T00:00:00+08:00'
-headline: Sed a tincidunt leo
+headline: Galvanized House
 subheadline: Nullam 2009
-image: /img/about-reinvest-profits.jpg
+image: /img/galvanized-house.jpg
 ---
-Proin ultrices vestibulum nisl vitae cursus. Vivamus tempus justo nibh, ac semper mi pharetra sed. Morbi porttitor gravida sapien. Morbi at tortor ut nibh tempus mattis. Vestibulum blandit sagittis egestas. Cras suscipit hendrerit erat vitae viverra. Vestibulum rhoncus quam lorem, vel tincidunt odio interdum quis. Cras quis molestie justo. Etiam a est gravida, consequat lorem quis, volutpat lacus. Fusce convallis finibus neque non interdum. Proin maximus ipsum risus, sed dignissim est volutpat tincidunt. Sed a tincidunt leo. In ut massa in mi ornare aliquet.
+An avid music connoisseur marries a contemplative and soft housewife – it equals – an embodiment of bold design but with pastels and hues emulating skies and forest. The house was inspired by the typical houses in shanty towns – the standard galvanized house – how can a generic typology of the house be different in the modern times or adapt to its current site condition – these where the questions we wanted to put out when designing this very liberal house. You are happy when you get a client and they tell you – you can do whatever you want? But for the more matured designer someone should know to have a certain restraint. The house was to make something that is everyday a bit luxurious (or to sheer away that this material is less of a material because its everywhere and cheap) – what we wanted to do was to introduce that this material has its performative aspect such as slowing down and canalizing water. What we wanted to create as well that a house could be masculine with splashes of pastels. With its open plan and set back of water in the ground floor there’s already a feeling that is somewhat an island – complex alcove ceiling design is predominant in the house but this pop gives an interface in movement and to create the separation of spaces but without walls. Another highlight is the master’s bedroom with a balcony where you can see the overgrowing skyline of Makati City. The interiors are designed to create fluidity blurring the boundaries of wall, floor and ceiling.

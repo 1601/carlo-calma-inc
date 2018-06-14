@@ -28,6 +28,9 @@
 	src: url(/fonts/MinionPro-Regular.otf);
 }
 
+.logo-calma {
+  width: 2rem;
+}
 
 .logo-font {
 	font-family: BebasNeue;
@@ -78,14 +81,14 @@ img {
 .about-page > h4, 
 .about-page > form {
 	margin: 1rem 0.5rem;
-    width: 110%;
-    margin-left: -1rem;
+  width: 110%;
+  margin-left: -0.8rem;
 }
 
 .about-page > blockquote {
 	margin:0 0.5rem;
 	width: 110%;
-    margin-left: -1rem;
+  margin-left: -0.8rem;
 }
 
 .about-page > blockquote > p {
@@ -145,7 +148,7 @@ to {opacity: 0;}
 .more-container > .full-content > span, 
 .more-container > .full-content > blockquote {
   width: 110%;
-  margin-left: -1rem;
+  margin-left: -0.8rem;
 }
 
 .more-container > .full-content > p > img {
@@ -260,17 +263,20 @@ input::-webkit-input-placeholder {
 
 	.container-Works {
 		/* good for 1440 */
-		margin-left: 10rem;
+    margin-left: 10rem;
+    margin-top: 4rem
 	}
 	
 	.container-Processes {
 		/* good for 1440 */
-		margin-left: 14rem;
+    margin-left: 14rem;
+    margin-top: 4rem
 	}
 	
 	.container-About {
 		/* good for 1440 */
-		margin-left: 19rem;
+    margin-left: 19rem;
+    margin-top: 4rem
 	}
 }
 

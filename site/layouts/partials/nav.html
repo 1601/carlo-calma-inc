@@ -1,4 +1,4 @@
-<nav class="overflow-hidden overflow-x-visible-ns bg-grey-4 relative {{ .Title }} flex justify-between w-100" id="main">
+<nav class="overflow-hidden overflow-x-visible-ns bg-grey-4 sticky relative {{ .Title }} flex justify-between w-100" id="main">
 
 	<!-- Container for left navigation part -->
 	<div class="left-nav">
@@ -29,7 +29,7 @@
 
 		<!-- Logo TODO: EDITABLE -->
 		<a href="/">
-			<img src="/img/carlo-logo.png" alt="Carlo Calma Consultancy Inc. Logo" class="dib not-in-{{ .Title }} logo-calma"/>
+			<img src="/img/carlocalma_logostudies.png" alt="Carlo Calma Consultancy Inc. Logo" class="dib not-in-{{ .Title }} logo-calma"/>
 		</a>
 	</div>
 
@@ -39,7 +39,7 @@
 </nav>
 
 
-<nav class="sticky overflow-hidden overflow-x-visible-ns bg-grey-4 relative {{ .Title }} w-100" id="second" style="display: none">
+<!-- <nav class="sticky overflow-hidden overflow-x-visible-ns bg-grey-4 relative {{ .Title }} w-100" id="second" style="display: none">
 
     <div class="tr flex justify-between">
         <div style="width: 16rem;"><a href="/" class="link dim white f6 f6-ns pointer ttu" style="font-size: 1.5rem;"><span class="logo-font">Carlo Calma Consultancy Inc.</span></a> </div>
@@ -57,41 +57,4 @@
         </div>
     </div>
 
-  </nav>
-
-<script>
-  $(document).ready(function() {
-
-
-    if(!$('nav#main').hasClass("Home")){
-
-			// grab the initial top offset of the navigation 
-		   	var stickyNavTop = $('nav#main').offset().top;
-
-         console.log(stickyNavTop);
-		   	
-		   	// our function that decides weather the navigation bar should have "fixed" css position or not.
-		   	var stickyNav = function(){
-			    var scrollTop = $(window).scrollTop(); // our current vertical position from the top
-			         
-			    // if we've scrolled more than the navigation, change its position to fixed to stick to top,
-			    // otherwise change it back to relative
-			    if (scrollTop > ( stickyNavTop + 10 ) ) { 
-			        // $('nav').addClass('sticky');
-              $('nav#main').css("display","hidden");
-              $('nav#second').slideDown("slow");
-			    } else {
-              $('nav#second').slideUp();
-              $('nav#main').css("display","auto");
-			    }
-			};
-
-			stickyNav();
-			// and run it again every time you scroll
-			$(window).scroll(function() {
-				stickyNav();
-			});
-    }
-    
-		});
-</script>
+  </nav> -->

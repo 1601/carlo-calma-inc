@@ -146,12 +146,24 @@ to {opacity: 0;}
 .more-container > .full-content > h5, 
 .more-container > .full-content > h6, 
 .more-container > .full-content > span, 
-.more-container > .full-content > blockquote {
+.more-container > .full-content > blockquote ,
+.single-work > p, 
+.single-work > ul, 
+.single-work > h1, 
+.single-work > h2, 
+.single-work > h3, 
+.single-work > h4, 
+.single-work > h5, 
+.single-work > h6, 
+.single-work > span, 
+.single-work > blockquote {
+  max-width: 110%;
   width: 110%;
   margin-left: -0.8rem;
 }
 
-.more-container > .full-content > p > img {
+.more-container > .full-content > p > img,
+.single-content > img {
   margin-left: 1rem;
 }
 

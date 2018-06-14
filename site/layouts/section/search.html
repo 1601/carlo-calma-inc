@@ -25,7 +25,7 @@
  
     <!-- <script type="text/javascript" src="/js/lunr.js"></script> -->
     <script type="text/javascript">
-    var lunrIndex, $results, pagesIndex;
+    var lunrIndex, $results, pagesIndex, searchText;
  
     function getQueryVariable(variable) {
         var query = window.location.search.substring(1);
@@ -90,6 +90,7 @@
      * @return {Array}  results
      */
     function search(query) {
+        searchText = query;
         return lunrIndex.search(query).map(function(result) {
                 return pagesIndex.filter(function(page) {
                     return page.uri === result.ref;
@@ -104,7 +105,13 @@
      */
     function renderResults(results) {
         if (!results.length) {
-            return;
+            console.log('no results');
+            $results.append ('<p> Your search - <strong>'+ searchText + '</strong> - did not match any documents.</p>' +
+            '<p>Suggestions:</p>'+
+            '<p style="margin-left: 1rem">Make sure that all words are spelled correctly.</p>' +
+            '<p style="margin-left: 1rem">Try different keywords.</p>' +
+            '<p style="margin-left: 1rem">Try more general keywords. </p>' +
+            '<p style="margin-left: 1rem">Try fewer keywords.');
         }
  
         // Only show the ten first results
@@ -131,6 +138,7 @@
         //  On load with query do search
         initUI();
         var searchTerm = getQueryVariable('query');
+        searchText = searchTerm;
         console.log(searchTerm);
 
         if(searchTerm) {
